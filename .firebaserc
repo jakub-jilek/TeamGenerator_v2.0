@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "team-generator-v2": {
+      "hosting": {
+        "team-generator-v2": [
+          "team-generator-v2"
+        ]
+      }
+    }
+  }
+}

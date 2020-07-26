@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title">Vyplň jméno a url pro tvůj obrázek</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" style="width: 80%; margin: auto">
+  <form [formGroup]="playerForm">
+    <div class="row" style="padding-bottom: 5px">
+      <label for="name">Jméno</label>
+      <input id="name" class="form-control" formControlName="name" [ngStyle]="{'border': playerForm.controls.name.touched && playerForm.controls.name.invalid ? '1px solid red' : '1px solid black'}">
+    </div>
+    <div class="row">
+      <label for="image">URL</label>
+      <input id="image" class="form-control" formControlName="image">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="passBack()">Close</button>
+</div>

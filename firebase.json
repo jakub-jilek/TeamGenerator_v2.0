@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "team-generator-v2",
+      "public": "dist/team-generator-v2",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
