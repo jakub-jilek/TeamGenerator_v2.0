@@ -118,8 +118,13 @@
               "devServerTarget": "team-generator-v2:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "team-generator-v2"
 }

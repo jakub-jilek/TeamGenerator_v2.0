@@ -14,14 +14,16 @@ export class CreateUserComponent implements OnInit {
 
   @Input() public player: Player = {name: '', image: ''};
 
+  @Input() public editing = false;
+
   @Output() passPlayer: EventEmitter<any> = new EventEmitter();
 
   constructor(private activeModal: NgbActiveModal) { }
 
   ngOnInit() {
     this.playerForm = new FormGroup({
-      name: new FormControl('', Validators.required),
-      image: new FormControl('')
+      name: new FormControl(this.player.name, Validators.required),
+      image: new FormControl(this.player.image)
     });
   }
 

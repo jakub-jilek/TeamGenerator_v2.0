@@ -18,6 +18,11 @@ export class PlayerService {
       .subscribe(u => console.log(u));
   }
 
+  updatePlayer(player: Player) {
+    this.http.put('https://team-generator-v2.firebaseio.com/players/' + player.id + '.json', { name: player.name, image: player.image })
+      .subscribe();
+  }
+
   deletePlayer(id: string) {
     return this.http.delete('https://team-generator-v2.firebaseio.com/players/' + id + '.json')
       .subscribe(() => {},
